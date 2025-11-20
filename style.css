@@ -1,0 +1,327 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+header{
+width: 90%;
+/* background-color: rgb(187, 176, 176); */
+margin: auto;
+display: flex;
+justify-content: space-between;
+padding: 20px 0;
+align-items: center;
+color: black;
+/* border: 1px solid red; */
+}
+.navbar{
+display: flex;
+
+align-items: center;
+justify-content: space-between;
+flex-wrap: wrap;
+
+}
+
+.logoImage{
+width: 110px;
+}
+.navbar .menu{
+flex: 1;
+margin-left:25px ;
+}
+.navbar .menu ul{
+display: flex;
+
+
+}
+.navbar .menu ul li{
+list-style: none;
+padding: 0 20px;
+
+}
+.navbar .menu ul li a:hover{
+border-bottom: 2px solid rgb(9, 9, 22);
+
+}
+.navbar .menu ul li a{ 
+text-decoration: none;
+color: black;
+}
+
+.cart{
+
+/* flex-basis: 30%; */
+align-items: center;
+
+}
+.cart .icons i{
+padding-right: 20px;
+color: black;
+
+}
+
+.menu-btn{
+cursor: pointer;
+position: absolute;
+top: 20px;
+right: 25px;
+display:none
+}
+
+/* SLIDER SECTIN */
+
+.SlideSection{
+width: 90%;
+background:url('images/slider.png'); 
+background-repeat: no-repeat;
+background-size: cover;
+  margin: auto;
+min-height: 400px;
+  display: flex;
+flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  color: black;
+  text-align: center;
+padding-bottom: 30px;
+/* margin-top: 20px; */
+flex-wrap: wrap;
+}
+.SlideSection .btn{
+background-color: black;
+color: white;
+font-size: 17px;
+padding: 12px;
+}
+.SlideSection  a{
+text-decoration: none;
+}
+.SlideSection .btn:hover{
+background: rgb(100, 84, 84);
+}
+.SlideSection h2,p,a{
+margin-bottom: 20px;
+}
+
+/* Home Cards  */
+
+.mainCards{
+max-width: 90%;
+display: grid;
+margin: auto;
+/* grid-template-columns: repeat(4,1fr); */
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
+margin-top: 50px;
+ grid-auto-flow: row;
+}
+.mainCards div h3,p{
+margin-top: 10px;
+}
+.mainCards div ,p{
+font-size: 17px;
+}
+.mainCards div a{
+text-decoration: none;
+font-weight:bold;
+color: rgb(74, 74, 243);
+font-size: 17px;
+}
+.mainCards div a:hover i{
+margin-left: 10px;
+color: black;
+}
+
+ /* XBOX */
+.xbox{
+max-width: 90%;
+max-height: 400px;
+background: url('images/xbox.png');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+margin: auto;
+margin-top: 50px ;
+
+}
+.xbox .content{
+max-width: 40%;
+padding: 40px;
+
+}
+.xbox .content p,a{
+padding-top: 20px;
+}
+.xbox .content a{
+background-color: black;
+color: white;
+font-size: 17px;
+padding: 12px;
+text-decoration: none;
+margin-top: 50px;
+}
+.xbox a:hover{
+background: rgb(100, 84, 84);
+}
+
+/* Carbon Section */
+
+.MainCarbon{
+max-width: 90%;
+min-height: 250px;
+background: url('images/carbon.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+margin: auto;
+/* padding-top: 70px ; */
+margin-top: 50px;
+
+}
+.MainCarbon .CarbonContent{
+max-width: 55%;
+padding: 45px;
+color: white;
+}
+.MainCarbon .CarbonContent a{
+background-color: white;
+color: black;
+font-size: 17px;
+padding: 12px;
+text-decoration: none;
+margin-top: 50px;
+}
+
+/* Social links */
+.MainSocial{
+max-width: 90%;
+padding-top: 30px;
+display: flex;
+/* justify-content:space-around */
+margin: auto;
+}
+.MainSocial .icons{
+align-items: center;
+justify-content: center;
+padding-left: 10px;
+padding-top: 11px;
+
+}
+.MainSocial .icons i{
+ color: rgb(85, 85, 241);
+font-size: 27px;
+cursor: pointer;
+padding-left: 7px;
+}
+
+/* footer */
+
+footer{
+max-width: 90%;
+margin: auto;
+background-color: #F2F2F2;
+min-height: 230px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+padding: 40px;
+row-gap: 25px;
+margin-top: 30px;
+
+}
+footer h4{
+color: #616161;
+}
+footer ul li{
+list-style: none;
+padding-top: 25px;
+font-size: 14px;
+
+}
+
+ /* RESPONSIVENESS */
+ /* Tablet View */
+@media(max-width:700px) {
+ 
+.menu-btn{
+display: block;
+}
+.menu-btn:hover{
+opacity: 0.5;
+}
+header{
+justify-content: flex-start;
+}
+header .menu ul{
+display: flex;
+flex-direction: column;
+position: absolute;
+top: 0;
+left: 0;
+background-color: #f2f2f2;
+height: 100%;
+transform: translateX(-500px);
+border-right: #ccc 1px solid;
+opacity: 0.9;
+width: 30%;
+padding:30px;
+}
+header .menu ul li{
+margin-top: 30px;
+}
+/* header .menu ul.show{
+transform: translateX(-20px);
+} */
+  .mainCards{
+ grid-template-columns: repeat(2,1fr);
+/* background-color: green; */
+}
+.xbox .content p{
+display: none;
+}
+.xbox .content h2{
+margin-bottom:40px;
+}
+.MainCarbon .CarbonContent{
+max-width: 85%;
+padding: 45px;
+color: white;
+margin: auto;
+}
+.xbox .content a{
+font-size: small;
+}
+.footer{
+grid-template-columns: repeat(2,1fr);
+}
+}
+
+ /* Mobile View */
+@media(max-width:500px){
+.mainCards{
+ grid-template-columns: repeat(1,1fr);
+/* background-color: green; */
+}
+.xbox .content p{
+display: none;
+}
+.xbox .content h2{
+margin-bottom:40px;
+}
+.xbox .content a{
+font-size: small;
+}
+.MainCarbon .CarbonContent{
+max-width: 100%;
+padding: 45px;
+color: white;
+margin: auto;
+}
+.footer{
+grid-template-columns: 1fr;
+}
+.footer div{
+margin-bottom: 20px;
+}
+}
